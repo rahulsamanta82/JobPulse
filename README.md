@@ -64,8 +64,8 @@ Create a `.env` file from `.env.example`:
 
 ```bash
 # Runtime Environment
-NODE_ENV=production
-PORT=3000
+NODE_ENV=
+PORT=
 
 # Database Configuration (MongoDB Atlas connection string)
 MONGODB_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/ACDYONJobPulse?retryWrites=true&w=majority
@@ -80,11 +80,11 @@ JOB_SOURCE_API_KEY=your_adzuna_api_key
 ADZUNA_COUNTRY=in
 
 # Ingestion Engine Parameters
-INGESTION_INTERVAL_MINUTES=60
-INGESTION_MAX_PAGES=3
-INGESTION_RESULTS_PER_PAGE=20
-INGESTION_MAX_RETRIES=3
-INGESTION_REQUEST_TIMEOUT_MS=10000
+INGESTION_INTERVAL_MINUTES=
+INGESTION_MAX_PAGES=
+INGESTION_RESULTS_PER_PAGE=
+INGESTION_MAX_RETRIES=
+INGESTION_REQUEST_TIMEOUT_MS=
 ```
 
 ---
