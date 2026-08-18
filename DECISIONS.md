@@ -43,6 +43,6 @@ In hostile scraping environments, detection occurs across several vector layers:
 * **Unified Pipeline**: Express serves `/api/*` REST endpoints and statically delivers the Vite-compiled React single page application (`dist/`) with full client-side SPA fallback.
 * **Benefits**:
   1. Zero CORS latency/misconfiguration on production domain.
-  2. One deployment URL (`https://jobpulse.onrender.com`), single environment configuration, and single health monitoring target.
+  2. One deployment URL (`https://jobpulse-tj7o.onrender.com/`), single environment configuration, and single health monitoring target.
   3. Seamless local development parity (`npm run dev`) with production runtime (`npm start`).
 
