@@ -1,0 +1,6 @@
+{
+  "name": "JobPulse",
+  "description": "Real-time job intelligence from trusted sources with resilient ingestion monitoring, deduplication, and detection-surface aware architecture.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
