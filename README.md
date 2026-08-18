@@ -100,7 +100,7 @@ INGESTION_REQUEST_TIMEOUT_MS=10000
 
 1. **Clone the repository**:
    ```bash
-   git clone <your-github-repo-url>
+   git clone https://github.com/rahulsamanta82/JobPulse.git
    cd jobpulse
    ```
 
