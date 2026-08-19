@@ -66,7 +66,7 @@ JobPulse is built as a **Single Web Service (One-Link)** application. A single u
 * **Single Domain / Single Service**: No separate frontend/backend deployments required. One URL handles UI, API, and WebSocket/health monitoring.
 * **Unified Same-Origin API Calls**: The frontend calls `/api/*` endpoints directly without CORS overhead or hardcoded domains.
 * **SPA Routing Fallback**: Direct browser access and hard refreshes on any route (`/`, `/system`, `/system/ingestion`, `/jobs/:id`) work seamlessly without 404 errors.
-* **MongoDB Atlas Persistence**: Job listings, deduplication keys, ingestion run audit logs, and source health metrics persist reliably in MongoDB across service restarts.
+* **MongoDB Atlas Persistence**: Job listings, deduplication keys, ingestion run audit logs,and source health metrics persist reliably in MongoDB across service restarts.
 * **Multi-Source Ingestion Pipeline**: Real adapters for Adzuna (REST API), Remotive (API), WeWorkRemotely (RSS), Jobicy (API), and QA Resilience Sandbox (edge-case simulations).
 
 ---
