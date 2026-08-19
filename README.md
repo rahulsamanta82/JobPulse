@@ -2,6 +2,12 @@
 
 > Acdyon Technologies Engineering Frontend Challenge (Part 1 & Render Production Ready)  
 > Full-stack TypeScript architecture featuring resilient background ingestion, multi-source adapters, normalization pipelines, deterministic SHA-256 deduplication, and a live Clean Minimalist discovery dashboard.
+[![Live Demo](https://img.shields.io/badge/Live-Demo-success)](https://jobpulse-tj7o.onrender.com)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black)](https://github.com/rahulsamanta82/JobPulse)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)](https://www.typescriptlang.org/)
+[![React](https://img.shields.io/badge/React-Vite-61DAFB)](https://react.dev/)
+[![Node.js](https://img.shields.io/badge/Node.js-Express-green)](https://nodejs.org/)
+[![MongoDB](https://img.shields.io/badge/MongoDB-Atlas-green)](https://www.mongodb.com/)
 
 ---
 
@@ -10,30 +16,51 @@
 JobPulse is built as a **Single Web Service (One-Link)** application. A single unified Node.js / Express process serves both the backend REST API (`/api/*`) and the production React / Vite Single Page Application (SPA) with full client-side route fallback.
 
 ```text
-                                Render
+                          
+                              Internet
                                   │
-                           ONE Web Service
-                        (Single Public URL)
+                                  ▼
+                         ┌─────────────────┐
+                         │     Render      │
+                         │  Web Service    │
+                         └────────┬────────┘
                                   │
-                            Express Server
-                                  │
-                     ┌────────────┴────────────┐
-                     │                         │
-                  /api/*                   Frontend
-                     │                         │
-               Backend Services              dist/
-                     │                         │
-             ┌───────┼────────┐                │
-             │       │        │                │
-           Adzuna Remotive   WWR              React/Vite
-             │       │        │
-             ├───────┼────────┤
-             │       │        │
-           Jobicy   QA Sandbox
-                     │
-                     ▼
-                MongoDB Atlas
+                                  ▼
+                         ┌─────────────────┐
+                         │ Node.js /       │
+                         │ Express Server  │
+                         └───────┬─────────┘
+                                 │
+                   ┌─────────────┴─────────────┐
+                   │                           │
+                   ▼                           ▼
+              REST API                    React / Vite
+              /api/*                       dist/
+                   │                           │
+                   ▼                           │
+          ┌─────────────────┐                  │
+          │ Ingestion Layer │                  │
+          └────────┬────────┘                  │
+                   │                           │
+       ┌───────────┼────────────┐              │
+       │           │            │              │
+       ▼           ▼            ▼              │
+    Adzuna     Remotive     WeWorkRemotely     │
+       │           │            │              │
+       └───────────┼────────────┘              │
+                   │                           │
+                   ▼                           │
+                Jobicy                         │
+                   │                           │
+                   └─────────────┬─────────────┘
+                                 ▼
+                          MongoDB Atlas
 ```
+
+
+
+
+
 
 ### Key Architectural Strengths:
 * **Single Domain / Single Service**: No separate frontend/backend deployments required. One URL handles UI, API, and WebSocket/health monitoring.
